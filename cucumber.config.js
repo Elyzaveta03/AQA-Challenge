@@ -1,11 +1,12 @@
 const { defineConfig } = require('cucumber');
 
 module.exports = defineConfig({
-    output: './reports/cucumber.json',
-    publish: true,
+    output: './allure-results',
     require: [
         './tests/step-definitions/**/*.js',
-        './tests/features/**/*.feature',
     ],
-    formatter: ['@cucumber/pretty', '@allure/cucumberjs'],
+    format: ["allure-cucumberjs/reporter"],
+    formatOptions: {
+        resultsDir: "allure-results",
+    },
 });

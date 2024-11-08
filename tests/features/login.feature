@@ -1,11 +1,14 @@
-Feature: Login functionality
+@login
+Feature: Log in functionality
 
-  Scenario: Successful login
-    Given Go to the login page
+  @login
+  Scenario: Successful log in
+    Given Go to the log in page
     When Enter a valid username and password
 
-  Scenario: Failed login
-    Given Go to the login page
+  @login
+  Scenario: Failed log in
+    Given Go to the log in page
     When Enter an invalid username
     Then Should see an error message
     When Enter an invalid password
