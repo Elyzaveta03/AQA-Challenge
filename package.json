@@ -5,10 +5,11 @@
     "start": "npm run start:backend",
     "start:backend": "node backend/app.js",
     "clean:results": "rm -rf results && mkdir results",
+    "clean:logs": "echo '' > test.log",
     "test:run": "npx cucumber-js --parallel 1 --format allure-cucumberjs/reporter --format-options '{ \"resultsDir\": \"results\" }'",
     "report:generate": "allure generate results --clean -o allure-report",
     "report:open": "allure open allure-report",
-    "test:allure": "npm run clean:results && npm run test:run && npm run report:generate && npm run report:open"
+    "test:allure": "npm run clean:logs && npm run clean:results && npm run test:run && npm run report:generate && npm run report:open"
   },
   "dependencies": {
     "@wdio/cli": "^9.2.6",

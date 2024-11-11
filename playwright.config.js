@@ -26,7 +26,7 @@ export default defineConfig({
     ['list'],
     ['allure-playwright']
   ],
-  outputDir: 'allure-results',
+  outputDir: 'results',
   expect: {
     // Maximum time expect() should wait for the condition to be met.
     timeout: 5000,
@@ -59,7 +59,6 @@ export default defineConfig({
       use: { ...devices['Desktop Chrome'] },
       trace: 'retain-on-failure',
       screenshot: 'only-on-failure',
-      video: 'always',
     },
   ],
 
