@@ -1,12 +1,12 @@
 const { defineConfig } = require('cucumber');
 
 module.exports = defineConfig({
-    output: './allure-results',
+    output: './results',
     require: [
         './tests/step-definitions/**/*.js',
     ],
     format: ["allure-cucumberjs/reporter"],
     formatOptions: {
-        resultsDir: "allure-results",
+        resultsDir: "results",
     },
 });

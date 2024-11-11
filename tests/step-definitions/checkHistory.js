@@ -1,4 +1,4 @@
-const {Given, When, Then, BeforeAll, AfterAll, setDefaultTimeout, Before} = require('@cucumber/cucumber');
+const {Given, attach, When, Then, BeforeAll, AfterAll, setDefaultTimeout, Before} = require('@cucumber/cucumber');
 const {chromium} = require('playwright');
 const {faker} = require("@faker-js/faker/locale/ar");
 const message1 = faker.hacker.phrase();
@@ -23,7 +23,7 @@ Given('User logged in as {string} for type message', async (username) => {
     info('User logged');
     await page.goto('http://localhost:3001');
     await page.fill('#username', username);
-    await page.fill('#password', 'pass1ыыыы');
+    await page.fill('#password', 'pass1');
     await page.click('#login-button');
 });
 

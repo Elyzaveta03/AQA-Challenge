@@ -27,7 +27,6 @@ When('Enter a valid username and password', async function () {
     await page.fill('#username', 'user1');
     await page.fill('#password', 'pass1');
     await page.click('#login-button');
-    await page.waitForLoadState('domcontentloaded');
 });
 
 When('Enter an invalid username', async function () {
